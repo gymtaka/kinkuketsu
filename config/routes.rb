@@ -1,6 +1,3 @@
 Rails.application.routes.draw do
-
-	get 'kanshi/sayhello'
-	get 'kanshi/byebye'
-
+  root 'application#hello'
 end
