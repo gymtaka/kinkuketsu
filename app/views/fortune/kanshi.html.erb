@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>金口訣</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all',
+                               'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application',
+                               'data-turbolinks-track': 'reload' %>
+  </head>
+
 <% provide(:title, "金口訣") %>
 <h1>About</h1>
 <p>
@@ -8,3 +19,24 @@
   <a href="http://rubyonrails.org/">Ruby on Rails</a>.
   This is the sample application for the tutorial.
 </p>
+
+<div class="center jumbotron">
+  <h1>Welcome to the Sample App</h1>
+
+  <h2>
+    This is the home page for the
+    <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
+    sample application.
+  </h2>
+
+  <%= link_to "Sign up now!", '#', class: "btn btn-lg btn-primary" %>
+</div>
+
+    
+</html>
+
+
+
+
+
+
