@@ -10,33 +10,469 @@
   </head>
 
 <% provide(:title, "金口訣") %>
-<h1>About</h1>
+<h1>金口訣</h1>
+
 <p>
-  <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
-  is a <a href="https://railstutorial.jp/#ebook">book</a> and
-  <a href="https://railstutorial.jp/#screencast">screencast</a>
-  to teach web development with
-  <a href="http://rubyonrails.org/">Ruby on Rails</a>.
-  This is the sample application for the tutorial.
+年干支
+<%= form_with model: @hoge do |f| %>
+
+  <%= f.select :year_kan, [["甲", "甲"], ["乙", "乙"], ["丙", "丙"], ["丁", "丁"], ["戊", "戊"], ["己", "己"], ["庚", "庚"], ["辛", "辛"], ["壬", "壬"], ["癸", "癸"]], include_blank: "選択して下さい" %>
+
+  <%= f.submit '送信'%>
+
+  
+   <%= f.select :year_shi, [["子", "子"], ["丑", "丑"], ["寅", "寅"], ["卯", "卯"], ["辰", "辰"], ["巳", "巳"], ["午", "午"], ["未", "未"], ["申", "申"], ["酉", "酉"], ["戌", "戌"], ["亥", "亥"]], include_blank: "選択して下さい" %>
+
+   <%= f.submit '送信'%>
+<% end %>
 </p>
 
-<div class="center jumbotron">
-  <h1>Welcome to the Sample App</h1>
+<p>
+月干支
+<%= form_with model: @hoge do |f| %>
 
-  <h2>
-    This is the home page for the
-    <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
-    sample application.
-  </h2>
+  <%= f.select :month_kan, [["甲", "甲"], ["乙", "乙"], ["丙", "丙"], ["丁", "丁"], ["戊", "戊"], ["己", "己"], ["庚", "庚"], ["辛", "辛"], ["壬", "壬"], ["癸", "癸"]], include_blank: "選択して下さい" %>
 
-  <%= link_to "Sign up now!", '#', class: "btn btn-lg btn-primary" %>
-</div>
+  <%= f.submit '送信'%>
 
+  
+   <%= f.select :month_shi, [["子", "子"], ["丑", "丑"], ["寅", "寅"], ["卯", "卯"], ["辰", "辰"], ["巳", "巳"], ["午", "午"], ["未", "未"], ["申", "申"], ["酉", "酉"], ["戌", "戌"], ["亥", "亥"]], include_blank: "選択して下さい" %>
+
+   <%= f.submit '送信'%>
+<% end %>
+</p>
+
+<p>
+日干支
+<%= form_with model: @hoge do |f| %>
+
+  <%= f.select :day_kan, [["甲", "甲"], ["乙", "乙"], ["丙", "丙"], ["丁", "丁"], ["戊", "戊"], ["己", "己"], ["庚", "庚"], ["辛", "辛"], ["壬", "壬"], ["癸", "癸"]], include_blank: "選択して下さい" %>
+
+  <%= f.submit '送信'%>
+
+  
+   <%= f.select :day_shi, [["子", "子"], ["丑", "丑"], ["寅", "寅"], ["卯", "卯"], ["辰", "辰"], ["巳", "巳"], ["午", "午"], ["未", "未"], ["申", "申"], ["酉", "酉"], ["戌", "戌"], ["亥", "亥"]], include_blank: "選択して下さい" %>
+
+   <%= f.submit '送信'%>
+<% end %>
+</p>
+
+<p>
+時干支
+<%= form_with model: @hoge do |f| %>
+
+  <%= f.select :time_kan, [["甲", "甲"], ["乙", "乙"], ["丙", "丙"], ["丁", "丁"], ["戊", "戊"], ["己", "己"], ["庚", "庚"], ["辛", "辛"], ["壬", "壬"], ["癸", "癸"]], include_blank: "選択して下さい" %>
+
+  <%= f.submit '送信'%>
+
+  
+   <%= f.select :time_shi, [["子", "子"], ["丑", "丑"], ["寅", "寅"], ["卯", "卯"], ["辰", "辰"], ["巳", "巳"], ["午", "午"], ["未", "未"], ["申", "申"], ["酉", "酉"], ["戌", "戌"], ["亥", "亥"]], include_blank: "選択して下さい" %>
+
+   <%= f.submit '送信'%>
+<% end %>
+</p>
+
+<h2>地分</h2>
+<p>
+
+<%= form_with model: @hoge do |f| %>
+
+   <%= f.select :chibun, [["子", "子"], ["丑", "丑"], ["寅", "寅"], ["卯", "卯"], ["辰", "辰"], ["巳", "巳"], ["午", "午"], ["未", "未"], ["申", "申"], ["酉", "酉"], ["戌", "戌"], ["亥", "亥"]], include_blank: "選択して下さい" %>
+
+   <%= f.submit '送信'%>
+<% end %>
+</p>
+
+<h2>将神</h2>
+<p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">月</th>
+      <th scope="col">月支</th>
+      <th scope="col">月将</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">2</th>
+      <td>寅</td>
+      <td>亥</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>卯</td>
+      <td>亥</td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td>辰</td>
+      <td>酉</td>
+    </tr>
+    <tr>
+    <th scope="row">5</th>
+      <td>巳</td>
+      <td>申</td>
+      </tr>
+      <tr>
+      <th scope="row">6</th>
+      <td>午</td>
+      <td>未</td>
+      </tr>
+      <tr>
+      <th scope="row">7</th>
+      <td>未</td>
+      <td>午</td>
+      </tr>
+      <tr>
+      <th scope="row">8</th>
+      <td>申</td>
+      <td>巳</td>
+      </tr>
+      <tr>
+      <th scope="row">9</th>
+      <td>酉</td>
+      <td>辰</td>
+      </tr>
+      <tr>
+      <th scope="row">10</th>
+      <td>戌</td>
+      <td>卯</td>
+      </tr>
+      <tr>
+      <th scope="row">11</th>
+      <td>亥</td>
+      <td>卯</td>
+      </tr>
+      <tr>
+      <th scope="row">12</th>
+      <td>子</td>
+      <td>丑</td>
+      </tr>
+      <th scope="row">1</th>
+      <td>丑</td>
+      <td>子</td>
+      </tr>
+  </tbody>
+</table>
+
+</p>
+
+<p>
+時支の上に月将の干支→地分の干支まで<br/>
     
+時支：子,丑,寅,卯,辰,巳,午,未,申,酉,戌,亥
+
+</p>
+
+<h2>貴神</h2>
+<p>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">番号</th>
+      <th scope="col">貴神</th>
+      <th scope="col">名称</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <th scope="row">1</th>
+    <td>丑</td>
+    <td>貴人</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>巳</td>
+      <td>騰蛇</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>午</td>
+      <td>朱雀</td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td>卯</td>
+      <td>六合</td>
+    </tr>
+    <tr>
+    <th scope="row">5</th>
+      <td>辰</td>
+      <td>勾陳</td>
+      </tr>
+      <tr>
+      <th scope="row">6</th>
+      <td>寅</td>
+      <td>青龍</td>
+      </tr>
+      <tr>
+      <th scope="row">7</th>
+      <td>戌</td>
+      <td>天空</td>
+      </tr>
+      <tr>
+      <th scope="row">8</th>
+      <td>申</td>
+      <td>白虎</td>
+      </tr>
+      <tr>
+      <th scope="row">9</th>
+      <td>未</td>
+      <td>太常</td>
+      </tr>
+      <tr>
+      <th scope="row">10</th>
+      <td>子</td>
+      <td>玄武</td>
+      </tr>
+      <tr>
+      <th scope="row">11</th>
+      <td>酉</td>
+      <td>太陰</td>
+      </tr>
+      <tr>
+      <th scope="row">12</th>
+      <td>亥</td>
+      <td>天后</td>
+      </tr>
+  </tbody>
+</table>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">日干</th>
+      <th scope="col">陽貴</th>
+      <th scope="col">陰貴</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <th scope="row">甲戊庚</th>
+    <td>丑・正順</td>
+    <td>未・逆順</td>
+    </tr>
+    <tr>
+      <th scope="row">乙己</th>
+      <td>子・正順</td>
+      <td>申・逆順</td>
+    </tr>
+    <tr>
+      <th scope="row">丙丁</th>
+      <td>亥・正順</td>
+      <td>酉・逆順</td>
+    </tr>
+    <tr>
+      <th scope="row">壬癸</th>
+      <td>巳・逆順</td>
+      <td>卯・正順</td>
+    </tr>
+    <tr>
+    <th scope="row">辛</th>
+      <td>午・逆順</td>
+      <td>寅・正順</td>
+      </tr>
+  </tbody>
+</table>
+
+日支と対応する貴神の十二支の上に丑(貴神1番)を乗せ、干支を地分まで回してそれと対応する十二支が貴神
+（例：晴れの丙の日に地分を午とした場合の貴神は申<br/>
+干支：子,丑,寅,卯,辰,巳,午,未,申,酉,戌,亥<br/><br/>
+
+正順：丑,巳,午,卯,辰,寅,戌,申,未,子,酉,亥<br/>
+逆順：亥,酉,子,未,申,戌,寅,辰,卯,午,巳,丑
+</p>
+
+<h2>人元</h2>
+<p>
+地分の十二支と日干の対応するところを選ぶ。
+</p>
+<p>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">十二支</th>
+      <th scope="col">甲己日</th>
+      <th scope="col">乙庚日</th>
+      <th scope="col">丙辛日</th>
+      <th scope="col">丁壬日</th>
+      <th scope="col">戊癸日</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">子</th>
+      <td>甲</td>
+      <td>丙</td>
+      <td>戊</td>
+      <td>庚</td>
+      <td>壬</td>
+    </tr>
+    <tr>
+      <th scope="row">丑</th>
+      <td>乙</td>
+      <td>丁</td>
+      <td>己</td>
+      <td>辛</td>
+      <td>癸</td>
+    </tr>
+    <tr>
+      <th scope="row">寅</th>
+      <td>丙</td>
+      <td>戊</td>
+      <td>庚</td>
+      <td>壬</td>
+      <td>甲</td>
+    </tr>
+    <tr>
+      <th scope="row">卯</th>
+      <td>丁</td>
+      <td>己</td>
+      <td>辛</td>
+      <td>癸</td>
+      <td>乙</td>
+      </tr>
+      <tr>
+      <th scope="row">辰</th>
+      <td>戊</td>
+      <td>庚</td>
+      <td>壬</td>
+      <td>甲</td>
+      <td>丙</td>
+      </tr>
+      <tr>
+      <th scope="row">巳</th>
+      <td>己</td>
+      <td>辛</td>
+      <td>癸</td>
+      <td>乙</td>
+      <td>丁</td>
+      </tr>
+      <tr>
+      <th scope="row">午</th>
+      <td>庚</td>
+      <td>壬</td>
+      <td>甲</td>
+      <td>丙</td>
+      <td>戊</td>
+      </tr>
+      <tr>
+      <th scope="row">未</th>
+      <td>辛</td>
+      <td>癸</td>
+      <td>乙</td>
+      <td>丁</td>
+      <td>己</td>
+      </tr>
+      <tr>
+      <th scope="row">申</th>
+      <td>壬</td>
+      <td>甲</td>
+      <td>丙</td>
+      <td>戊</td>
+      <td>庚</td>
+      </tr>
+      <tr>
+      <th scope="row">酉</th>
+      <td>癸</td>
+      <td>乙</td>
+      <td>丁</td>
+      <td>己</td>
+      <td>辛</td>
+      </tr>
+      <tr>
+      <th scope="row">戌</th>
+      <td>甲</td>
+      <td>丙</td>
+      <td>戊</td>
+      <td>庚</td>
+      <td>壬</td>
+      </tr>
+      <th scope="row">亥</th>
+      <td>乙</td>
+      <td>丁</td>
+      <td>己</td>
+      <td>辛</td>
+      <td>癸</td>
+      </tr>
+  </tbody>
+</table>
+
+</p>
+<p>
+神干と将干は人元と同じ。
+</p>
+<h2>十二支の陰陽</h2>
+<p>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">五行</th>
+      <th scope="col">木</th>
+      <th scope="col">火</th>
+      <th scope="col">土</th>
+      <th scope="col">金</th>
+      <th scope="col">水</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th scope="row">陽</th>
+    <td>寅</td>
+    <td>午</td>
+    <td>辰・戌</td>
+    <td>申</td>
+    <td>子</td>
+    </tr>
+    <tr>
+    <th scope="row">陰</th>
+    <td>卯</td>
+    <td>巳</td>
+    <td>丑・未</td>
+    <td>酉</td>
+    <td>亥</td>
+    </tr>
+      </tbody>
+</table>
+</p>
+
+<h2>用爻</h2>
+<p>
+四陽：貴神
+</p>
+<p>
+三陽一陰：一陰となる貴神か将神
+</p>
+<p>
+二陽二陰：将神
+</p>
+<p>
+一陽三陰：一陽となる貴神か将神
+</p>
+<p>
+四陰：将神
+</p>
+
+<h2>旺相休囚死</h2>
+<p>
+1種類の五行：その五行が旺
+</p>
+<p>
+2種類の五行：連続する五行は前が旺、後が相、離れている場合は剋する側が旺、剋される側が死。
+<br/>例外的に、剋される側が3つの場合は、剋される側が旺、剋する側が囚
+</p>
+<p>
+3種類の五行：連続している場合は、剋される五行が死、それ以外の２つは旺。
+<br/>連続していない場合は、何からも剋されない五行が旺、それに剋されるのが死、残りが休
+</p>
+<p>
+4種類の五行：剋されないものが旺、相生は相、旺に剋されるものが死、残りが休
+</p>
+
+
 </html>
-
-
-
 
 
 
